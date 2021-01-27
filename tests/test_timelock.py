@@ -1,13 +1,7 @@
-from brownie import (
-    chain,
-    reverts,
-    MockToken,
-    SimpleTokenTimelock,
-    SimpleTokenTimelockFactory,
-)
+from brownie import reverts
 
 
-def test_timelock(a):
+def test_timelock(chain, a, MockToken, SimpleTokenTimelock, SimpleTokenTimelockFactory):
     # params
     releaseTimes = [2000000000, 3000000000]
     amounts = [10 * 10 ** 18, 100 * 10 ** 18]
